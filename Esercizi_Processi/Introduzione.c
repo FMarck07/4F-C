@@ -35,9 +35,9 @@ int main(int argc, char *argv[])
 
     int p = fork();
     if(p > 0){
+        wait(&p);
         printf("Sono il padre PID = %d\n", getpid());
         printf("Mio figlio ha pid = %d\n", p);
-        wait(&p);
     }else if(p == 0){
         printf("Sono il figlio PID = %d\n", getpid());
         printf("Mio padre ha pid = %d\n", getppid());
