@@ -75,11 +75,7 @@ int main() {
         exit(1);
     }
 
-    // Aspetta la terminazione di tutti i figli
-    for (int i = 0; i < 3; i++) {
-        wait(NULL);
-    }
-
+   
     printf("Tutti i figli hanno terminato. Processo padre (PID = %d) conclude.\n", getpid());
     return 0;
 }
