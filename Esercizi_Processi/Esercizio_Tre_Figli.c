@@ -47,7 +47,7 @@ int main() {
         printf("La somma dei numeri pari è: %d\n", somma);
         exit(0);
     } else if (f1 < 0) {
-        perror("Errore nella creazione del primo figlio");
+        printf("Errore nella creazione del primo figlio");
         exit(1);
     }
 
@@ -59,7 +59,7 @@ int main() {
         printf("La somma dei numeri dispari è: %d\n", somma);
         exit(0);
     } else if (f2 < 0) {
-        perror("Errore nella creazione del secondo figlio");
+        printf("Errore nella creazione del secondo figlio");
         exit(1);
     }
 
@@ -71,7 +71,7 @@ int main() {
         printf("Il massimo valore dell'array è: %d\n", max);
         exit(0);
     } else if (f3 < 0) {
-        perror("Errore nella creazione del terzo figlio");
+        printf("Errore nella creazione del terzo figlio");
         exit(1);
     }
 
