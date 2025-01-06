@@ -9,9 +9,7 @@ int main(int argc, char *argv[])
    {
       printf("Errore numero di argomenti\n");
       exit(1);
-   }
-
-   
+   }   
 
    int fd = open(argv[1], O_RDONLY);
 
