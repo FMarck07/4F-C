@@ -6,6 +6,7 @@
 #include <string.h>
 
 int main(int argc, char *argv[])
+
 {
     if (argc != 2)
     {
@@ -14,7 +15,7 @@ int main(int argc, char *argv[])
     }
 
     char alfabeto[] = "abcdefghijklmnopqrstuvz";
-    int fd = open(argv[1], O_CREAT, 0666);
+    int fd = open(argv[1], O_WRONLY | O_CREAT, 0644);
     write(fd, alfabeto, strlen(alfabeto));
     close(fd);
 
