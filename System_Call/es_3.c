@@ -51,7 +51,9 @@ int main(int argc, char *argv[])
         exit(1);
     }
 
-    int fd = open(argv[1], O_WRONLY | O_CREAT, 0644);   
+    int fd = open(argv[1], O_WRONLY | O_CREAT | O_TRUNC, 0644);
+
+    //int fd = creat(argv[1], 0644);   
 
     swap(argc, argv);
 
