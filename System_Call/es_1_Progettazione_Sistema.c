@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
     if (f == 0)
     {
         close(pipe1[0]); 
-        close(1); //output
+        close(1); //output leggere
         dup(pipe1[1]);
         close(pipe1[1]);
         execl("/bin/cat", "cat", argv[1], (char *)0);
@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
     else if(f > 0)
     {
         close(pipe1[1]);
-        close(0); //input
+        close(0); //input scrivere
         dup(pipe1[0]);
         close(pipe1[0]);
         execl("/bin/more", "more", (char *)0);
