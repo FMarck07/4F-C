@@ -31,6 +31,8 @@ int main(int argc, char *argv[])
         dup(pipe1[0]);
         close(pipe1[0]);
         execl("/bin/more", "more", (char *)0);
+        //execl("/bin/less", "less", (char *)0); //Sia avanti sia indietro
+        
     }
 
     close(pipe1[0]);
