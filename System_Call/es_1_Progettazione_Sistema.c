@@ -32,7 +32,6 @@ int main(int argc, char *argv[])
         close(pipe1[0]);
         execl("/bin/more", "more", (char *)0);
         //execl("/bin/less", "less", (char *)0); //Sia avanti sia indietro
-        
     }
 
     close(pipe1[0]);
