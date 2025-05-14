@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <sys/wait.h>
+#include <string.h>  // Per strlen()
 
 #define NOME_FILE "dato.txt"
 
@@ -21,7 +22,9 @@ int main() {
             exit(1);
         }
 
-        fprintf(file, "%s", stringa);
+        // Scrittura senza fprintf()
+        fwrite(stringa, 1, strlen(stringa), file);
+
         fclose(file);
         exit(0);
     }
